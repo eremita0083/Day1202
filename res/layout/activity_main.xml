@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp" >
+
+    <TextView
+        android:id="@+id/currentMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="music player" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/shuffleBtn"
+        android:layout_below="@+id/currentMusic"
+        />
+
+    <ToggleButton
+        android:id="@+id/shuffleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/shuffleText"
+        android:layout_alignParentRight="true"
+        android:checked="false" />
+
+    <ImageButton
+        android:id="@+id/playBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/shuffleBtn"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_media_play" />
+
+    <Button
+        android:id="@+id/stopBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/shuffleBtn"
+        android:layout_alignBottom="@+id/shuffleBtn"
+        android:layout_alignParentLeft="true"
+        android:padding="3dp"
+        android:text="stop" />
+
+    <TextView
+        android:id="@+id/shuffleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/shuffleBtn"
+        android:layout_alignLeft="@+id/shuffleBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/shuffleBtn"
+        android:gravity="center_horizontal"
+        android:text="shuffle" />
+
+</RelativeLayout>
